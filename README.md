@@ -19,6 +19,8 @@
 | w/o <i>L</i><sub>domain</sub> | 1.86 | 2.60 | 24.64 | 0.76 | **18.94** | 18.46 | 12.64 | 10.16 | 33.53 | 21.76 | 20.01 | 15.03 |
 | <b>w/ <i>L</i><sub>domain</sub> (Proposed)</b> | **1.59** | **1.99** | **24.34** | **0.64** | 31.23 | **14.04** | **6.06** | **9.86** | **12.05** | **9.89** | **19.30** | **11.91** |
 
+
+We also investigate the effect of factor $\alpha$ on system performance. Setting $\alpha = 0$ yields stable good in-domain performance but triggers severe performance drops on out-of-domain datasets. As $\alpha$ increases, the mean EER first decreases and then increases, indicating an optimal trade-off for generalization. Notably, $\alpha \in [0.02, 0.05]$ consistently yields near-optimal mean EER, demonstrating that the fusion performance is insensitive to the exact choice of $\alpha$ and validating our setting of $\alpha = 0.02$. Although $\alpha = 0.02$ appears small, it works well in the logit space where confident expert predictions exhibit large dynamic ranges.
 ### Sensitivity of residual factor &alpha;
 
 | &alpha; | 19LA | CFAD (Seen) | CFAD (Unseen) | Codecfake (Avg.) | Codecfake (C7) | ASV21 (LA) | ASV21 (DF) | ADD2022 | CD-ADD | ITW | SONAR | Mean |
